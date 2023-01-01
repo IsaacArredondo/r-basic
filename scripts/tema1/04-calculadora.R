@@ -17,6 +17,7 @@
 725%/%7
 
 725%%7
+# Algoritmo de Euclides
 # D = d * q + r
 # r = D - d * q
 # q = D %/% d
@@ -122,7 +123,6 @@ round(sqrt(2))
 round(digits = 5, sqrt(2))
 round(5, sqrt(2))
 
-
 floor(-3.45)
 ceiling(-3.45)
 trunc(-3.45)
@@ -196,6 +196,24 @@ ls()
 
 rm(list = ls())
 
+# video 27: Creando la funcion de operaciones
+# basicas
+
+opBasic = function(a,b){
+  print("Suma");
+  print(a+b);
+  print("Resta");
+  print(paste(sprintf("%i - %i =",a,b),a-b));
+  print(paste(sprintf("%i - %i =",b,a),b-a));
+  print("Producto");
+  print(paste(sprintf("%i * %i =",a,b),a*b));
+  print("Cociente de la division entera");
+  print(paste(sprintf("%i : %i =",a,b),a%/%b));
+  print(paste("con resto ",a%%b));
+  print(paste(sprintf("%i : %i =",b,a),b%/%a));
+  print(paste("con resto ",b%%a));
+  }
+
 class(3+2i)
 
 (3+2i)*5
@@ -217,6 +235,7 @@ sqrt(as.complex(-5))
 #La raíz cuadrada devuelve, de las dos soluciones la de
 #Re(z)>0, para obtener la otra,  hay que multiplicar por -1
 sqrt(3+2i) # z^2 = 3+2i
+sqrt(3+2i)*(-1)
 exp(3+2i)
 sin(3+2i)
 cos(3+2i)
@@ -227,6 +246,7 @@ Mod(z1)
 # = arccos(Re(z)/Mod(z))
 # = arcsin(Im(z)/Mod(z))
 # va de (-pi, pi]
+Arg(z1)
 Arg(-1+0i)
 Arg(-1-2i)
 #Conjugado = Re(z)- Im(z)i
